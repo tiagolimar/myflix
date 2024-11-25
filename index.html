@@ -3,62 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
 </head>
-<body class="w-screen">
-    <nav class="bg-violet-500  p-4 flex justify-between">MInha navbar</nav>
+<body class="w-full">
+    <nav class="bg-violet-500 text-white font-semibold p-4 flex justify-between border-b border-violet-700">
+        <h1 class="px-2 py-1" tabindex="1">
+            <a class="text-xl" href="#">MyFlix</a>
+        </h1>
+        <ul class="flex gap-2">
+            <li class="px-2 py-1" tabindex="1">Home</li>
+            <li class="px-2 py-1" tabindex="1">Configurações</li>
+            <li class="px-2 py-1" tabindex="1">Sair</li>
+        </ul>
+    </nav>
 
-    <main class="bg-violet-200">
-        <h1 class="text-center text-3xl">Lista de Filmes e Séries</h1>
-        <section class="bg-violet-100 ">
-            <h2>Itens em Progresso</h2>
-            <ul class="flex flex-wrap gap-4 p-4">
-                <li class="flex flex-col flex-1">
-                    <img class="rounded" src="./assets/img.png" alt="" srcset="">
-                    <h3>Nome do Filme</h3>
-                    <span class="flex ">
-                        <p>Progresso: </p>
-                        <p>0,00%</p>
-                    </span>
-                </li>
-                <li class="flex flex-col flex-1">
-                    <img class="rounded" src="./assets/img.png" alt="" srcset="">
-                    <h3>Nome do Filme</h3>
-                    <span class="flex ">
-                        <p>Progresso: </p>
-                        <p>0,00%</p>
-                    </span>
-                </li>
-                <li class="flex flex-col flex-1">
-                    <img class="rounded" src="./assets/img.png" alt="" srcset="">
-                    <h3>Nome do Filme</h3>
-                    <span class="flex ">
-                        <p>Progresso: </p>
-                        <p>0,00%</p>
-                    </span>
-                </li>
-                <li class="flex flex-col flex-1">
-                    <img class="rounded" src="./assets/img.png" alt="" srcset="">
-                    <h3>Nome do Filme</h3>
-                    <span class="flex ">
-                        <p>Progresso: </p>
-                        <p>0,00%</p>
-                    </span>
-                </li>
-                <li class="flex flex-col flex-1">
-                    <img class="rounded" src="./assets/img.png" alt="" srcset="">
-                    <h3>Nome do Filme</h3>
-                    <span class="flex ">
-                        <p>Progresso: </p>
-                        <p>0,00%</p>
-                    </span>
-                </li>
-            </ul>
+    <main class="bg-violet-200 w-full">
+        <section class="py-4 px-32 flex gap-4 justify-center">
+            <div class="relative flex-1">
+                <input tabindex="1" class="p-2 w-full border border-violet-100 rounded-full outline-none hover:shadow hover:border hover:border-violet-200 focus:shadow focus:border focus:border-violet-400" type="text" placeholder="Pesquisar">
+                <span tabindex="1" class="material-symbols-outlined absolute right-2 top-2 hover:cursor-pointer">
+                    search
+                </span>
+            </div>
+            <div class="flex-3">
+                <select class="py-2 px-4 w-full rounded-full border border-violet-100" name="categoria" id="categoria">
+                    <option value="categoria">Categoria</option>
+                </select>
+            </div>
+        </section>
+        <section id="progresso" class="bg-violet-100 px-32 py-8">
+            <h2 class="text-2xl">Lista de Progresso</h2>
+            <ul class="flex overflow-x-auto gap-4 py-4"></ul>
+        </section>
+        <section id="desejos" class="bg-violet-100 px-32 py-8">
+            <h2 class="text-2xl">Lista de Desejos</h2>
+            <ul class="flex border overflow-x-auto gap-4 py-4"></ul>
         </section>
     </main>
     
-    <footer class="bg-violet-800">MInha footer</footer>
+    <footer class="bg-violet-800">Minha footer</footer>
     
     <script src="./js/script.js"></script>
 </body>
