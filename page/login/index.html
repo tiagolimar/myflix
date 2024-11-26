@@ -7,15 +7,16 @@
     <title>Login</title>
 </head>
 <body class="bg-violet-300">
-    <form class="bg-violet-100 sm-w-full w-1/2 container mx-auto p-8 mt-16 rounded flex flex-col gap-4">
+    <form class="bg-violet-100 sm-w-full w-1/2 container mx-auto p-8 mt-16 rounded flex flex-col gap-4" onsubmit="login(event)">
         <h1 class="text-center text-4xl text-violet-800 pb-4">MyFlix</h1>
         <div class="w-full">
-            <input class="p-2 ps-4 w-full border border-violet-100 rounded-full outline-none hover:shadow hover:border hover:border-violet-200 focus:shadow focus:border focus:border-violet-400" type="text" placeholder="Usuário">
+            <input id="usuario" name="usuario" class="p-2 ps-4 w-full border border-violet-100 rounded-full outline-none hover:shadow hover:border hover:border-violet-200 focus:shadow focus:border focus:border-violet-400" type="text" placeholder="Usuário" required>
         </div>
         <div class="w-full">
-            <input class="p-2 ps-4 w-full border border-violet-100 rounded-full outline-none hover:shadow hover:border hover:border-violet-200 focus:shadow focus:border focus:border-violet-400" type="password" placeholder="Senha">
+            <input id="senha" name="senha" class="p-2 ps-4 w-full border border-violet-100 rounded-full outline-none hover:shadow hover:border hover:border-violet-200 focus:shadow focus:border focus:border-violet-400" type="password" placeholder="Senha" required>
         </div>
         <button class="p-2 w-full border border-violet-100 bg-violet-400 hover:bg-violet-500 focus:bg-violet-500 rounded-full outline-none hover:shadow hover:border hover:border-violet-200 focus:shadow focus:border focus:border-violet-900 text-white font-semibold" >Fazer login</button>
     </form>
+    <script src="index.js"></script>
 </body>
 </html>

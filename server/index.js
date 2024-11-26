@@ -1,11 +1,11 @@
 import express from 'express';
-// import cors from 'cors';
+import cors from 'cors';
+import 'dotenv/config'
 
 const app = express();
 const PORT = 3000;
 
-// app.use(cors({origin:process.env.URL}));
-// app.use(express.urlencoded({ extended: true }));
+app.use(cors());
 app.use(express.json());
 
 app.get('/',(request,response)=>{
@@ -14,12 +14,12 @@ app.get('/',(request,response)=>{
 
 app.post('/api/login',(request,response)=>{
     const {usuario,senha} = request.body;
-
-    if(usuario === process.env.USER && senha === process.env.SENHA){
-        response.send({message:'Usuário logado com sucesso',token:'tokiendementira'})
+    console.log(process.env.USUARIO)
+    if(usuario === process.env.USUARIO && senha === process.env.SENHA){
+        response.send({message:'Usuário logado com sucesso',success:true, token:'tokiendementira'})
     }
     else{
-        response.status(401).send({message:'Usuário ou senha incorretos',token:''})
+        response.status(401).send({message:'Usuário ou senha incorretos',success:false, token:''})
     }
 })
 
