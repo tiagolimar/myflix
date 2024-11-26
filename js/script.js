@@ -1,3 +1,24 @@
+function verificarLogin(){
+    const token = localStorage.getItem('token');
+    fetch('http://localhost:3000/api/login/verificar',{
+        method:'POST',
+        headers:{
+            'Content-Type':'application/json'
+        },
+        body:JSON.stringify({token})
+    }).then(
+        response=>response.json()
+    ).then(
+        dados=>{
+            if (dados.success === false){
+                location.href = '/page/login';
+            }
+        }
+    )
+}
+
+verificarLogin();
+
 function preencherElementos() {
     const template = `
     <li class="flex flex-col flex-1 min-w-[256px] max-w-[30%]">

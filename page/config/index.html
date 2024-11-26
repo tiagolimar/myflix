@@ -8,11 +8,33 @@
     <title>Configurações</title>
 </head>
 <body class="bg-violet-300">
-    <main class="text-center text-violet-900 mt-16 text-5xl flex flex-col gap-4">
-        CONFIGURAÇÃO
-        <span class="material-symbols-outlined text-5xl">
-            report
-        </span>
+    <nav class="bg-violet-500 text-white font-semibold p-4 flex justify-between border-b border-violet-700">
+        <h1 class="px-2 py-1" tabindex="1">
+            <a class="text-xl" href="./">MyFlix</a>
+        </h1>
+        <ul class="flex gap-2">
+            <li class="px-2 py-1" tabindex="1">
+                <a href="/">Home</a>
+            </li>
+            <li class="px-2 py-1" tabindex="1">
+                <a href="/page/config/">Configurações</a>
+            </li>
+            <li class="px-2 py-1" tabindex="1">
+                <a href="/page/login/">Logout</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="text-violet-900 mt-16 text-5xl flex flex-col gap-4 h-screen">
+        <form class="bg-violet-100 sm-w-full w-1/2 container mx-auto p-8 mt-16 rounded flex flex-col gap-4">
+            <ul>
+                <li><p>>Apagar tudo</p></li>
+                <li><p>>Nome de usuário</p></li>
+                <li><p>>Alterar senha</p></li>
+            </ul>
+        </form>
     </main>
+
+    <footer class="bg-violet-800">Minha footer</footer>
 </body>
 </html>

@@ -14,7 +14,7 @@ function login(event) {
     ).then(
         dados=>{
             if (dados.success === true){
-                localStorage
+                localStorage.setItem('token',dados.token)
                 location.href = '/';
             }else{
                 alert('Senha ou usuário incorreto(s).');
@@ -22,3 +22,6 @@ function login(event) {
         }
     )
 }
+
+localStorage.setItem('token','');
+console.log(localStorage.getItem('token'))
