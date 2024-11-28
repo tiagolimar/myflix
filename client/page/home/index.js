@@ -18,13 +18,14 @@ function verificarLogin(){
 }
 
 verificarLogin();
+createMenu();
 
 function preencherElementos() {
     const template = `
     <li class="flex flex-col flex-1 min-w-[256px] max-w-[30%]">
-        <img class="rounded" src="./assets/img.png" alt="" srcset="">
+        <img class="rounded" src="/client/assets/img.png" alt="" srcset="">
         <h3>Nome do Filme</h3>
-        <span class="flex ">
+        <span class="flex">
             <p>Progresso: </p>
             <p>0,00%</p>
         </span>
