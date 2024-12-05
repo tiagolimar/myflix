@@ -31,4 +31,4 @@ function testeAPI(){
     fetch(url).then(response=>response.json()).then(dados=>console.log(dados.results))
 }
 
-testeAPI();
+// testeAPI();

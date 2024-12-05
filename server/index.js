@@ -21,18 +21,18 @@ app.post('/api/login',(request,response)=>{
     else{
         response.status(401).send({message:'Usuário ou senha incorretos',success:false, token:''})
     }
-})
+});
 
 app.post('/api/login/verificar',(request,response)=>{
     const {token} = request.body;
 
     if(token === 'tokiendementira'){
-        response.send({message:'Usuário logado com sucesso',success:true})
+        response.send({message:'Usuário logado com sucesso', success:true})
     }
     else{
-        response.status(401).send({message:'Usuário não logado',success:false})
+        response.status(401).send({message:'Usuário não logado', success:false})
     }
-})
+});
 
 app.listen(PORT, () => {
     console.log(`Servidor funcionando na porta ${PORT}`);
